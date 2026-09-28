@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chính sách quyền riêng tư (Privacy Policy) của tiện ích mở rộng Chrome Seeding Agent. Cam kết bảo mật, xử lý 100% dữ liệu cục bộ và không lưu trữ trên máy chủ bên thứ ba.">
+  <meta name="author" content="Seeding Agent Team">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Chính Sách Quyền Riêng Tư — Seeding Agent">
+  <meta property="og:description" content="Chính sách quyền riêng tư của tiện ích Chrome Seeding Agent. Bảo vệ quyền riêng tư người dùng, xử lý dữ liệu cục bộ, không thu thập dữ liệu cá nhân.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="icons/icon32.png">
+  <title>Chính Sách Quyền Riêng Tư (Privacy Policy) — Seeding Agent</title>
+
+  <style>
+    :root {
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --bg-page: #0f172a;
+      --bg-surface: #1e293b;
+      --bg-surface-elevated: #283548;
+      --bg-code: #0b1120;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-soft: #cbd5e1;
+      --border: #334155;
+      --border-accent: #3b82f6;
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --primary-light: rgba(59, 130, 246, 0.12);
+      --success: #10b981;
+      --success-light: rgba(16, 185, 129, 0.12);
+      --warning: #f59e0b;
+      --warning-light: rgba(245, 158, 11, 0.12);
+      --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+      --badge-bg: #1e3a5f;
+      --badge-text: #60a5fa;
+      --table-header-bg: #172236;
+      --table-row-alt: #162032;
+    }
+
+    [data-theme="light"] {
+      --bg-page: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-surface-elevated: #f1f5f9;
+      --bg-code: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-soft: #334155;
+      --border: #e2e8f0;
+      --border-accent: #2563eb;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-light: rgba(37, 99, 235, 0.08);
+      --success: #059669;
+      --success-light: rgba(5, 150, 105, 0.08);
+      --warning: #d97706;
+      --warning-light: rgba(217, 119, 6, 0.08);
+      --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      --badge-bg: #dbeafe;
+      --badge-text: #1d4ed8;
+      --table-header-bg: #f1f5f9;
+      --table-row-alt: #f8fafc;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.7;
+      font-size: 15px;
+      transition: background-color 0.25s ease, color 0.25s ease;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header Bar */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .brand-title {
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-pill {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      border-radius: 9999px;
+      margin-left: 0.5rem;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .theme-toggle-btn {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 0.45rem 0.75rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+
+    .theme-toggle-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .github-link {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 0.45rem 0.75rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+
+    .github-link:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 4rem 1.5rem;
+    }
+
+    /* Hero Card */
+    .hero-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.25rem;
+      box-shadow: var(--card-shadow);
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #10b981, #3b82f6, #8b5cf6);
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 760px;
+      margin-bottom: 1.5rem;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .meta-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .meta-value {
+      font-weight: 600;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    /* Key Guarantees Grid */
+    .guarantees-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .guarantee-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .guarantee-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary);
+    }
+
+    .guarantee-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .guarantee-card.secure .guarantee-icon { background: var(--success-light); color: var(--success); }
+    .guarantee-card.local .guarantee-icon { background: var(--primary-light); color: var(--primary); }
+    .guarantee-card.transparent .guarantee-icon { background: var(--warning-light); color: var(--warning); }
+
+    .guarantee-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .guarantee-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Quick Navigation / Table of Contents */
+    .toc-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--card-shadow);
+    }
+
+    .toc-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .toc-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.5rem 1.5rem;
+      list-style-type: none;
+    }
+
+    .toc-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0;
+      transition: color 0.15s ease;
+    }
+
+    .toc-link:hover {
+      color: var(--primary);
+    }
+
+    .toc-link::before {
+      content: "§";
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    /* Policy Content Sections */
+    .policy-section {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--card-shadow);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-number {
+      width: 32px;
+      height: 32px;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .policy-section p {
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+    }
+
+    .policy-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-section h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 1.35rem 0 0.5rem 0;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .policy-section ul, .policy-section ol {
+      padding-left: 1.35rem;
+      margin-bottom: 1rem;
+      color: var(--text-soft);
+    }
+
+    .policy-section li {
+      margin-bottom: 0.45rem;
+    }
+
+    .policy-section li strong {
+      color: var(--text-main);
+    }
+
+    /* Callout Boxes */
+    .callout {
+      border-radius: 10px;
+      padding: 1.1rem 1.25rem;
+      margin: 1.25rem 0;
+      border-left: 4px solid;
+      font-size: 0.92rem;
+    }
+
+    .callout-success {
+      background: var(--success-light);
+      border-color: var(--success);
+      color: var(--text-soft);
+    }
+
+    .callout-info {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--text-soft);
+    }
+
+    .callout-warning {
+      background: var(--warning-light);
+      border-color: var(--warning);
+      color: var(--text-soft);
+    }
+
+    .callout-title {
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .callout-success .callout-title { color: var(--success); }
+    .callout-info .callout-title { color: var(--primary); }
+    .callout-warning .callout-title { color: var(--warning); }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.88rem;
+    }
+
+    th {
+      background: var(--table-header-bg);
+      color: var(--text-main);
+      padding: 0.85rem 1rem;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-soft);
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background: var(--table-row-alt);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.85em;
+      background: var(--bg-code);
+      color: var(--primary);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    /* Contact Card */
+    .contact-box {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .contact-card-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .contact-icon {
+      font-size: 1.35rem;
+      color: var(--primary);
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .contact-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-value {
+      font-weight: 600;
+      color: var(--text-main);
+      word-break: break-all;
+    }
+
+    .contact-value a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .contact-value a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--primary);
+      color: #ffffff;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease;
+      z-index: 40;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 1.6rem;
+      }
+      .hero-card {
+        padding: 1.5rem;
+      }
+      .policy-section {
+        padding: 1.5rem;
+      }
+      .toc-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+      .top-nav, .theme-toggle-btn, .github-link, .back-to-top {
+        display: none !important;
+      }
+      .hero-card, .policy-section, .toc-card {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <a href="#" class="brand-wrap">
+        <img src="icons/icon48.png" alt="Seeding Agent Logo" class="brand-icon" onerror="this.src='../icons/icon48.png'; this.onerror=null;">
+        <span class="brand-title">Seeding Agent</span>
+        <span class="brand-pill">Chính Sách Quyền Riêng Tư</span>
+      </a>
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Đổi giao diện Sáng/Tối">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span id="themeToggleText">Giao diện</span>
+        </button>
+        <a href="https://github.com/CNDT-HOZA/Seeding-Agent" target="_blank" rel="noopener noreferrer" class="github-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Hero Card -->
+    <div class="hero-card">
+      <span class="hero-tag">Chính Sách & Quy Định Bảo Mật</span>
+      <h1 class="hero-title">Chính Sách Quyền Riêng Tư</h1>
+      <p class="hero-subtitle">
+        Cam kết bảo mật dữ liệu, minh bạch hoạt động và tôn trọng quyền riêng tư của người dùng đối với tiện ích mở rộng <strong>Seeding Agent</strong> trên Cửa hàng Chrome trực tuyến (Chrome Web Store).
+      </p>
+
+      <div class="meta-grid">
+        <div class="meta-item">
+          <span class="meta-label">Tên tiện ích</span>
+          <span class="meta-value">Seeding Agent</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Nhà phát triển</span>
+          <span class="meta-value">Nhà phát triển cá nhân (Individual)</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Ngày có hiệu lực</span>
+          <span class="meta-value">28 tháng 09 năm 2026</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Kho mã nguồn</span>
+          <span class="meta-value"><a href="https://github.com/CNDT-HOZA/Seeding-Agent" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">CNDT-HOZA/Seeding-Agent</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Guarantees Grid -->
+    <div class="guarantees-grid">
+      <div class="guarantee-card secure">
+        <div class="guarantee-icon">🛡️</div>
+        <div class="guarantee-title">Không Thu Thập Dữ Liệu</div>
+        <div class="guarantee-desc">Không thu thập dữ liệu cá nhân, không có máy chủ lưu trữ bên ngoài của nhà phát triển.</div>
+      </div>
+      <div class="guarantee-card local">
+        <div class="guarantee-icon">💻</div>
+        <div class="guarantee-title">Xử Lý 100% Cục Bộ</div>
+        <div class="guarantee-desc">Mọi tác vụ, thuật toán và API key chỉ được lưu và xử lý trực tiếp trên trình duyệt Chrome của bạn.</div>
+      </div>
+      <div class="guarantee-card transparent">
+        <div class="guarantee-icon">🔍</div>
+        <div class="guarantee-title">Mã Nguồn Mở Minh Bạch</div>
+        <div class="guarantee-desc">Toàn bộ mã nguồn được công khai trên GitHub, cho phép kiểm tra và đối chiếu độc lập bất cứ lúc nào.</div>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <nav class="toc-card" aria-label="Mục lục chính sách">
+      <div class="toc-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="8" y1="6" x2="21" y2="6"></line>
+          <line x1="8" y1="12" x2="21" y2="12"></line>
+          <line x1="8" y1="18" x2="21" y2="18"></line>
+          <line x1="3" y1="6" x2="3.01" y2="6"></line>
+          <line x1="3" y1="12" x2="3.01" y2="12"></line>
+          <line x1="3" y1="18" x2="3.01" y2="18"></line>
+        </svg>
+        Mục Lục Chính Sách
+      </div>
+      <ul class="toc-list">
+        <li><a href="#section-1" class="toc-link">1. Giới thiệu</a></li>
+        <li><a href="#section-2" class="toc-link">2. Thông tin chúng tôi thu thập</a></li>
+        <li><a href="#section-3" class="toc-link">3. Cách chúng tôi sử dụng thông tin</a></li>
+        <li><a href="#section-4" class="toc-link">4. Chia sẻ thông tin</a></li>
+        <li><a href="#section-5" class="toc-link">5. Bảo mật dữ liệu</a></li>
+        <li><a href="#section-6" class="toc-link">6. Quyền của bạn</a></li>
+        <li><a href="#section-7" class="toc-link">7. Thay đổi chính sách</a></li>
+        <li><a href="#section-8" class="toc-link">8. Liên hệ</a></li>
+      </ul>
+    </nav>
+
+    <!-- SECTION 1 -->
+    <section id="section-1" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">1</span>
+        <h2 class="section-title">Giới thiệu</h2>
+      </div>
+      <p>
+        Chào mừng bạn đến với <strong>Seeding Agent</strong>. Seeding Agent là tiện ích mở rộng dành cho trình duyệt Google Chrome (Chrome Extension) được phát triển và duy trì bởi nhà phát triển cá nhân độc lập (Individual Developer). Tiện ích được cung cấp với mã nguồn mở tại kho lưu trữ GitHub chính thức: <a href="https://github.com/CNDT-HOZA/Seeding-Agent" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">CNDT-HOZA/Seeding-Agent</a>.
+      </p>
+      <p>
+        Tiện ích <strong>Seeding Agent</strong> được phát triển nhằm hỗ trợ người dùng tự động hóa các tác vụ seeding và tương tác kênh YouTube (xem video, thích, bình luận thông minh dựa trên mô hình trí tuệ nhân tạo Google Gemini AI), đồng thời thực hiện các hoạt động duyệt web tự nhiên hàng ngày (đọc email trên Gmail, cập nhật tin tức trên Google News, tìm kiếm từ khóa trên Google Search) dựa trên Hồ sơ Khách hàng và cấu hình từ Google Sheets.
+      </p>
+      <p>
+        Chúng tôi hiểu rằng quyền riêng tư của bạn là vô cùng quan trọng. Chính sách Quyền riêng tư này được lập ra nhằm giải thích minh bạch cách tiện ích tương tác với dữ liệu của bạn, khẳng định cam kết <strong>không thu thập dữ liệu cá nhân</strong>, và làm rõ các quyền kiểm soát dữ liệu của người dùng khi cài đặt tiện ích từ Cửa hàng Chrome trực tuyến (Chrome Web Store).
+      </p>
+
+      <div class="callout callout-info">
+        <div class="callout-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          Cam kết tuân thủ chính sách Google
+        </div>
+        Seeding Agent tuân thủ nghiêm ngặt <em>Chính sách dành cho nhà phát triển của Cửa hàng Chrome trực tuyến (Chrome Web Store Developer Program Policies)</em>, bao gồm chính sách về <em>Mục đích duy nhất (Single Purpose)</em> và <em>Chính sách Dữ liệu Người dùng của Dịch vụ API Google (Google API Services User Data Policy)</em>.
+      </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section id="section-2" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">2</span>
+        <h2 class="section-title">Thông tin chúng tôi thu thập</h2>
+      </div>
+
+      <div class="callout callout-success">
+        <div class="callout-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          Tuyên bố cốt lõi: Chúng tôi KHÔNG thu thập dữ liệu cá nhân của bạn
+        </div>
+        Seeding Agent hoạt động theo nguyên tắc <strong>Ưu tiên Cục bộ (Local-First Architecture)</strong>. Chúng tôi <strong>không sở hữu máy chủ trung gian</strong>, không thu thập, không theo dõi, không lưu trữ và không truyền tải bất kỳ dữ liệu cá nhân, thông tin định danh (PII), lịch sử duyệt web hay mật khẩu nào của bạn về phía nhà phát triển.
+      </div>
+
+      <p>Cụ thể, các loại dữ liệu mà tiện ích tương tác và lưu trữ hoàn toàn cục bộ trên trình duyệt của bạn bao gồm:</p>
+
+      <h4>1. Cấu hình cài đặt và Khóa API (API Keys &amp; Settings)</h4>
+      <ul>
+        <li><strong>Khóa Google Gemini AI API:</strong> Khóa API do chính người dùng tự tạo từ Google AI Studio và nhập vào tiện ích để phục vụ tính năng tạo nội dung bình luận tự động.</li>
+        <li><strong>Thông tin xác thực Google Sheets:</strong> Token xác thực OAuth (thông qua Chrome Identity API) hoặc Google Sheets API Key do người dùng cung cấp nhằm đọc bảng tính Google Sheets.</li>
+        <li><strong>Cấu hình chiến dịch:</strong> Lựa chọn chế độ chạy (chỉ xem, xem + like, xem + like + bình luận), cấu hình khoảng cách thời gian mô phỏng, độ trễ thao tác, và tỷ lệ tương tác.</li>
+        <li><em>Phương thức lưu trữ:</em> Toàn bộ cấu hình và khóa API được lưu trữ độc quyền trong vùng nhớ cục bộ của trình duyệt thông qua <code>chrome.storage.local</code>. Khóa API không bao giờ được chia sẻ hay gửi đi bất kỳ đâu ngoại trừ các yêu cầu trực tiếp đến máy chủ chính thức của Google.</li>
+      </ul>
+
+      <h4>2. Dữ liệu từ Google Sheets (Spreadsheet Data)</h4>
+      <ul>
+        <li>Tiện ích chỉ đọc dữ liệu từ các URL bảng tính Google Sheets mà bạn chỉ định cụ thể trong trang cài đặt (bao gồm: danh sách URL kênh đối thủ, kênh nhà, từ khóa tìm kiếm và các trường thông tin Hồ sơ Khách hàng - HSKG).</li>
+        <li>Dữ liệu này chỉ được nạp tạm thời vào bộ nhớ RAM của tiện ích để thực thi chiến dịch và đồng bộ vào bộ nhớ cục bộ <code>chrome.storage.local</code> của tiện ích. Chúng tôi không sao lưu hoặc gửi nội dung bảng tính này đến bất kỳ bên thứ ba nào khác.</li>
+      </ul>
+
+      <h4>3. Dữ liệu ngữ cảnh duyệt web (Web Context Data)</h4>
+      <ul>
+        <li><strong>YouTube:</strong> Khi bạn kích hoạt tiện ích trên YouTube, tiện ích đọc các thông tin công khai của video đang xem (tiêu đề video, mô tả, tên kênh, danh sách bình luận công khai hiện có) nhằm cung cấp ngữ cảnh cho Gemini AI tạo nội dung bình luận phù hợp.</li>
+        <li><strong>Gmail, Google News, Google Search:</strong> Tiện ích chỉ truy cập các trang này khi người dùng bật tính năng hoạt động thường nhật (daily activities) để mô phỏng hành vi mở email, cuộn trang tin tức hoặc tìm kiếm từ khóa. Tiện ích <strong>không trích xuất, không lưu lại và không gửi nội dung email</strong> của bạn ra ngoài.</li>
+      </ul>
+
+      <h4>4. Nhật ký hoạt động cục bộ (Local Activity Logs)</h4>
+      <ul>
+        <li>Các dòng nhật ký hoạt động (ví dụ: "Đã xem video X", "Đã gửi bình luận trên video Y", "Lỗi nạp Google Sheet") được lưu cục bộ trong bộ nhớ trình duyệt nhằm hiển thị cho bạn theo dõi trực quan trên giao diện thanh bên (Side Panel).</li>
+        <li>Nhật ký này nằm hoàn toàn trên thiết bị của bạn và tự động làm mới hoặc bị xóa khi bạn yêu cầu.</li>
+      </ul>
+
+      <h4>5. Không sử dụng Cookie theo dõi hoặc Công cụ Phân tích (No Analytics / Trackers)</h4>
+      <p>
+        Tiện ích tuyệt đối không tích hợp bất kỳ dịch vụ theo dõi hành vi, mã phân tích người dùng nào như Google Analytics, Facebook Pixel, Mixpanel, Hotjar hay bất kỳ mạng lưới quảng cáo nào của bên thứ ba.
+      </p>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section id="section-3" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">3</span>
+        <h2 class="section-title">Cách chúng tôi sử dụng thông tin</h2>
+      </div>
+      <p>
+        Mọi dữ liệu được tiện ích xử lý chỉ nhằm một mục đích duy nhất: phục vụ trực tiếp cho hoạt động của các tính năng mà bạn đã chủ động cấu hình và cho phép trên tiện ích Seeding Agent (Single Purpose Principle).
+      </p>
+
+      <h4>Mục đích sử dụng cụ thể:</h4>
+      <ul>
+        <li><strong>Tự động tương tác trên YouTube:</strong> Mô phỏng hành vi người dùng thật (di chuyển chuột theo đường cong Bezier ngẫu nhiên, cuộn trang tự nhiên, tua video mượt mà, bấm like, và nhập nội dung bình luận với tốc độ gõ phím của con người).</li>
+        <li><strong>Tạo nội dung bình luận ngữ cảnh bằng Gemini AI:</strong> Gửi tiêu đề video, mô tả tóm tắt và đặc điểm hồ sơ khách hàng (HSKG) trực tiếp đến máy chủ Google Gemini API để nhận về nội dung phản hồi bình luận phù hợp, lịch sự và tự nhiên.</li>
+        <li><strong>Đọc danh sách mục tiêu từ Google Sheets:</strong> Lấy danh sách kênh đối thủ, kênh nhà và từ khóa mà bạn đã chuẩn bị sẵn để lập danh sách tác vụ tự động.</li>
+        <li><strong>Thực hiện các hoạt động sinh hoạt thường nhật:</strong> Duyệt đọc email trong Gmail, đọc tin tức trên Google News và thực hiện tìm kiếm từ khóa trên Google Search để giữ cho tài khoản hoạt động đều đặn và tự nhiên.</li>
+        <li><strong>Lưu cấu hình phiên làm việc:</strong> Sử dụng <code>chrome.storage</code> để lưu giữ cấu hình cá nhân của bạn, giúp bạn không cần nhập lại khóa API hay URL bảng tính mỗi khi khởi động lại trình duyệt.</li>
+      </ul>
+
+      <h4>Bảng giải trình mục đích sử dụng các quyền hạn (Permissions) của Chrome:</h4>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Quyền (Permission)</th>
+              <th>Mục đích sử dụng</th>
+              <th>Phạm vi xử lý dữ liệu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>storage</code></td>
+              <td>Lưu trữ cài đặt tiện ích, khóa API, danh sách kênh và nhật ký hoạt động.</td>
+              <td>Lưu cục bộ trong <code>chrome.storage.local</code> trên máy người dùng. Không đồng bộ đám mây ngoài.</td>
+            </tr>
+            <tr>
+              <td><code>alarms</code></td>
+              <td>Thiết lập đồng hồ định thời cho các phiên tương tác và lịch chạy tự động.</td>
+              <td>Chỉ kích hoạt sự kiện hẹn giờ cục bộ trong trình duyệt.</td>
+            </tr>
+            <tr>
+              <td><code>sidePanel</code></td>
+              <td>Hiển thị giao diện điều khiển trung tâm (Dashboard) ngay bên cạnh cửa sổ Chrome.</td>
+              <td>Giao diện người dùng cục bộ, không giao tiếp máy chủ ngoài.</td>
+            </tr>
+            <tr>
+              <td><code>identity</code></td>
+              <td>Xác thực OAuth với tài khoản Google để người dùng cấp quyền đọc Google Sheets.</td>
+              <td>Trao đổi token trực tiếp giữa trình duyệt Chrome và máy chủ OAuth của Google.</td>
+            </tr>
+            <tr>
+              <td><code>activeTab</code> &amp; <code>tabs</code></td>
+              <td>Mở, chuyển đổi và theo dõi trạng thái các tab YouTube, Gmail, News và Search khi chạy tác vụ.</td>
+              <td>Chỉ áp dụng trên các tab do tiện ích mở hoặc tab trang web được chỉ định rõ trong kịch bản.</td>
+            </tr>
+            <tr>
+              <td><code>scripting</code></td>
+              <td>Thực thi mã điều khiển mô phỏng thao tác cuộn chuột, click và nhập liệu trên trang mục tiêu.</td>
+              <td>Chạy mã script cục bộ trực tiếp trên trang người dùng đang chỉ định thực hiện seeding.</td>
+            </tr>
+            <tr>
+              <td><code>debugger</code></td>
+              <td>Mô phỏng chính xác các sự kiện chuột (di chuyển Bezier, cuộn trang thực) như người dùng thật.</td>
+              <td>Tương tác mức thấp qua giao thức Chrome DevTools Protocol trực tiếp trên tab nhiệm vụ.</td>
+            </tr>
+            <tr>
+              <td><code>host_permissions</code><br>(YouTube, Google Sheets, Gmail, News, Search, Gemini API)</td>
+              <td>Cho phép tiện ích gửi yêu cầu HTTP và tương tác với các dịch vụ tương ứng của Google theo chức năng đã công bố.</td>
+              <td>Chỉ kết nối trực tiếp đến các miền dịch vụ của Google theo cấu hình người dùng.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section id="section-4" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">4</span>
+        <h2 class="section-title">Chia sẻ thông tin</h2>
+      </div>
+
+      <div class="callout callout-warning">
+        <div class="callout-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          Cam kết tuyệt đối không bán hoặc chuyển giao dữ liệu
+        </div>
+        Chúng tôi <strong>KHÔNG BAO GIỜ</strong> bán, trao đổi, chia sẻ, cho thuê hoặc chuyển nhượng dữ liệu cá nhân hay dữ liệu duyệt web của bạn cho bất kỳ bên thứ ba, nhà môi giới dữ liệu (data brokers) hoặc công ty quảng cáo nào.
+      </div>
+
+      <p>
+        Tiện ích chỉ thực hiện các kết nối truyền dữ liệu trực tiếp từ trình duyệt của bạn tới các dịch vụ chính thức của Google, bao gồm:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Google Gemini AI API (<code>generativelanguage.googleapis.com</code>):</strong> Khi tạo bình luận, tiện ích gửi ngữ cảnh video và hướng dẫn (prompt) tới mô hình ngôn ngữ lớn của Google bằng chính API Key của bạn. Google xử lý yêu cầu này theo <a href="https://ai.google.dev/terms" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">Điều khoản dịch vụ Google AI</a>.
+        </li>
+        <li>
+          <strong>Google Sheets API (<code>sheets.googleapis.com</code>):</strong> Tiện ích gửi yêu cầu đọc dữ liệu các ô tính từ bảng tính mà bạn đã cấp quyền để nạp danh sách kênh đối thủ và hồ sơ khách hàng.
+        </li>
+        <li>
+          <strong>Các dịch vụ web của Google (YouTube, Gmail, Google News, Google Search):</strong> Tiện ích tương tác trên các tab này dưới phiên đăng nhập hợp lệ hiện tại của chính bạn trên trình duyệt Chrome.
+        </li>
+      </ul>
+
+      <h4>Tuân thủ Chính sách Dữ liệu Người dùng của Dịch vụ API Google (Limited Use Disclosure):</h4>
+      <p>
+        Việc sử dụng và chuyển giao thông tin nhận được từ các API của Google tới bất kỳ ứng dụng nào khác của <strong>Seeding Agent</strong> sẽ tuân thủ nghiêm ngặt <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">Chính sách Dữ liệu Người dùng của Dịch vụ API Google</a>, bao gồm các yêu cầu về <strong>Sử dụng có giới hạn (Limited Use)</strong>:
+      </p>
+      <ol>
+        <li>Chúng tôi chỉ sử dụng quyền truy cập vào Google Sheets và các dịch vụ Google để cung cấp hoặc cải thiện các tính năng hiển thị trực tiếp cho người dùng trong giao diện tiện ích.</li>
+        <li>Chúng tôi không chuyển giao dữ liệu này cho bên thứ ba, trừ khi cần thiết để tuân thủ pháp luật hoặc khi tiện ích thực hiện cuộc gọi API trực tiếp theo lệnh của chính bạn.</li>
+        <li>Chúng tôi không sử dụng hoặc chuyển giao dữ liệu người dùng để phân phát quảng cáo, bao gồm quảng cáo cá nhân hóa, quảng cáo nhắm mục tiêu hoặc quảng cáo dựa trên mối quan tâm.</li>
+        <li>Chúng tôi không cho phép con người đọc dữ liệu của bạn, trừ khi bạn đồng ý rõ ràng để hỗ trợ kỹ thuật hoặc khi luật pháp yêu cầu.</li>
+        <li>Dữ liệu Google API không bao giờ được sử dụng để huấn luyện hoặc tinh chỉnh các mô hình trí tuệ nhân tạo (AI/ML) tổng quát của bên thứ ba.</li>
+      </ol>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section id="section-5" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">5</span>
+        <h2 class="section-title">Bảo mật dữ liệu</h2>
+      </div>
+      <p>
+        Bảo vệ dữ liệu và an toàn thông tin của người dùng là nguyên tắc thiết kế quan trọng hàng đầu của chúng tôi. Chúng tôi áp dụng các giải pháp kỹ thuật sau:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Cơ chế Sandbox bảo mật của Google Chrome:</strong> Dữ liệu cấu hình và khóa API của bạn được lưu trong bộ nhớ <code>chrome.storage.local</code>. Đây là vùng lưu trữ cục bộ được bảo vệ bởi cơ chế sandbox độc lập của trình duyệt Chrome, ngăn chặn các website bên ngoài hoặc các tiện ích khác đọc trộm dữ liệu.
+        </li>
+        <li>
+          <strong>Mã hóa khi truyền tải (Encryption in Transit):</strong> 100% các kết nối mạng được thực hiện bởi tiện ích (kết nối đến Google Sheets API, Gemini AI API, YouTube, v.v.) đều sử dụng giao thức bảo mật cao cấp <strong>HTTPS / TLS 1.3</strong>, đảm bảo dữ liệu không bị nghe lén hay can thiệp trên đường truyền mạng.
+        </li>
+        <li>
+          <strong>Không tồn tại máy chủ trung gian:</strong> Vì chúng tôi không có máy chủ lưu trữ (Zero-Server Architecture), bạn không phải đối mặt với các nguy cơ rò rỉ dữ liệu (data breach), tấn công cơ sở dữ liệu hay xâm nhập máy chủ từ tin tặc.
+        </li>
+        <li>
+          <strong>Giải phóng bộ nhớ an toàn:</strong> Dữ liệu duyệt web và nhật ký hoạt động chỉ lưu tạm trong phiên làm việc và có thể được bạn xóa sạch bất kỳ lúc nào chỉ bằng một thao tác.
+        </li>
+      </ul>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section id="section-6" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">6</span>
+        <h2 class="section-title">Quyền của bạn</h2>
+      </div>
+      <p>
+        Bạn có toàn quyền kiểm soát tuyệt đối đối với tiện ích Seeding Agent và dữ liệu của mình:
+      </p>
+
+      <ul>
+        <li><strong>Quyền kiểm soát hoạt động:</strong> Bạn có quyền bắt đầu, tạm dừng hoặc dừng hoàn toàn hoạt động của tiện ích bất kỳ lúc nào thông qua nút điều khiển trong Side Panel. Tiện ích sẽ không tự ý chạy khi bạn không kích hoạt.</li>
+        <li><strong>Quyền chỉnh sửa và xóa dữ liệu:</strong> Bạn có thể dễ dàng thay đổi hoặc xóa bỏ khóa Gemini API, liên kết Google Sheets hoặc bất kỳ cài đặt nào trong bảng cấu hình của tiện ích.</li>
+        <li><strong>Quyền xóa toàn bộ dữ liệu (Data Deletion):</strong> Để xóa hoàn toàn mọi dữ liệu mà tiện ích đã lưu trên trình duyệt của bạn, bạn chỉ cần gỡ cài đặt tiện ích bằng cách: nhấp chuột phải vào biểu tượng Seeding Agent trên thanh tiện ích Chrome &gt; chọn <em>"Xóa khỏi Chrome..." (Remove from Chrome)</em>. Toàn bộ cấu hình trong <code>chrome.storage.local</code> sẽ bị hệ thống Chrome xóa sạch vĩnh viễn khỏi thiết bị.</li>
+        <li><strong>Quyền thu hồi quyền truy cập Google:</strong> Nếu bạn đã đăng nhập và cấp quyền Google OAuth thông qua tiện ích, bạn có thể thu hồi quyền bất kỳ lúc nào tại trang quản lý tài khoản chính thức của Google: <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">myaccount.google.com/permissions</a>.</li>
+        <li><strong>Quyền kiểm tra mã nguồn (Open Source Transparency):</strong> Vì Seeding Agent là phần mềm nguồn mở, bạn luôn có quyền kiểm tra từng dòng mã nguồn tại <a href="https://github.com/CNDT-HOZA/Seeding-Agent" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">kho lưu trữ GitHub</a> để bảo đảm rằng tiện ích thực hiện chính xác những gì được mô tả trong Chính sách này.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 7 -->
+    <section id="section-7" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">7</span>
+        <h2 class="section-title">Thay đổi chính sách</h2>
+      </div>
+      <p>
+        Chúng tôi có thể cập nhật Chính sách Quyền riêng tư này theo định kỳ nhằm phản ánh những cải tiến tính năng mới của tiện ích hoặc đáp ứng các yêu cầu pháp lý, quy định cập nhật từ Cửa hàng Chrome trực tuyến (Chrome Web Store).
+      </p>
+      <p>
+        Khi có bất kỳ thay đổi nào, chúng tôi sẽ cập nhật mục <strong>"Ngày có hiệu lực"</strong> ở đầu trang này. Đối với các thay đổi trọng yếu có thể ảnh hưởng đến quyền lợi hoặc cách thức xử lý dữ liệu của bạn, chúng tôi sẽ thông báo công khai thông qua ghi chú phát hành (Release Notes) trên kho lưu trữ GitHub và trực tiếp trong giao diện tiện ích nếu cần thiết.
+      </p>
+      <p>
+        Chúng tôi khuyến khích bạn định kỳ xem lại trang này để nắm bắt thông tin mới nhất về các cam kết bảo vệ quyền riêng tư của chúng tôi.
+      </p>
+    </section>
+
+    <!-- SECTION 8 -->
+    <section id="section-8" class="policy-section">
+      <div class="section-header">
+        <span class="section-number">8</span>
+        <h2 class="section-title">Liên hệ</h2>
+      </div>
+      <p>
+        Nếu bạn có bất kỳ câu hỏi, thắc mắc, phản hồi hoặc cần hỗ trợ liên quan đến Chính sách Quyền riêng tư này cũng như các vấn đề bảo mật của Seeding Agent, vui lòng liên hệ với nhà phát triển qua các kênh thông tin sau:
+      </p>
+
+      <div class="contact-box">
+        <div class="contact-card-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <div class="contact-label">Email hỗ trợ kỹ thuật &amp; Quyền riêng tư</div>
+            <div class="contact-value">
+              <a href="mailto:204703494+CNDT-HOZA@users.noreply.github.com">204703494+CNDT-HOZA@users.noreply.github.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card-item">
+          <div class="contact-icon">🐙</div>
+          <div>
+            <div class="contact-label">Kho lưu trữ &amp; Đóng góp mã nguồn</div>
+            <div class="contact-value">
+              <a href="https://github.com/CNDT-HOZA/Seeding-Agent" target="_blank" rel="noopener noreferrer">github.com/CNDT-HOZA/Seeding-Agent</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card-item">
+          <div class="contact-icon">🐛</div>
+          <div>
+            <div class="contact-label">Báo cáo lỗi &amp; Yêu cầu tính năng</div>
+            <div class="contact-value">
+              <a href="https://github.com/CNDT-HOZA/Seeding-Agent/issues" target="_blank" rel="noopener noreferrer">github.com/CNDT-HOZA/Seeding-Agent/issues</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card-item">
+          <div class="contact-icon">👤</div>
+          <div>
+            <div class="contact-label">Hình thức nhà phát triển</div>
+            <div class="contact-value">Nhà phát triển cá nhân (Individual Developer)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="#section-1">Giới thiệu</a>
+      <a href="#section-2">Thu thập dữ liệu</a>
+      <a href="#section-3">Sử dụng thông tin</a>
+      <a href="#section-4">Chia sẻ</a>
+      <a href="#section-5">Bảo mật</a>
+      <a href="#section-6">Quyền người dùng</a>
+      <a href="#section-8">Liên hệ</a>
+      <a href="https://github.com/CNDT-HOZA/Seeding-Agent" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+    </div>
+    <p>
+      &copy; 2026 Seeding Agent. Bản quyền thuộc về nhà phát triển cá nhân dự án Seeding Agent. Trang tài liệu lưu trữ chính thức trên GitHub Pages.
+    </p>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Cuộn lên đầu trang">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    (function() {
+      // Theme Toggle Logic
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const themeToggleText = document.getElementById('themeToggleText');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+      function applyTheme(theme) {
+        if (theme === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+          if (themeToggleText) themeToggleText.textContent = 'Giao diện: Sáng';
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+          if (themeToggleText) themeToggleText.textContent = 'Giao diện: Tối';
+        }
+      }
+
+      // Check saved theme or system preference
+      const savedTheme = localStorage.getItem('seeding_theme');
+      if (savedTheme) {
+        applyTheme(savedTheme);
+      } else {
+        applyTheme(prefersDark.matches ? 'dark' : 'light');
+      }
+
+      themeToggleBtn.addEventListener('click', function() {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        const newTheme = isLight ? 'dark' : 'light';
+        localStorage.setItem('seeding_theme', newTheme);
+        applyTheme(newTheme);
+      });
+
+      // Back to top button logic
+      const backToTopBtn = document.getElementById('backToTopBtn');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('visible');
+        } else {
+          backToTopBtn.classList.remove('visible');
+        }
+      });
+
+      backToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
